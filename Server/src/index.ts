@@ -21,6 +21,10 @@ interface User {
 // Store user data (in a real application, this should be in a database)
 let users: User[] = [];
 
+app.get('/helth', (req, res) => {
+  res.send('Im Alive');
+});
+
 // Connect to Solana devnet (change to mainnet-beta for production)
 const connection = new Connection('https://api.devnet.solana.com', 'confirmed');
 
